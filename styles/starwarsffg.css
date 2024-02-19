@@ -226,6 +226,7 @@ img {
   font-family: "Roboto", sans-serif;
 }
 .starwarsffg.sheet.actor .tabs {
+  flex-basis: 0;
   height: 15px;
   margin-bottom: 10px;
   border: 0;
@@ -376,7 +377,6 @@ img {
   object-fit: contain;
 }
 .starwarsffg.sheet.actor .character .sheet-body {
-  height: calc(100% - 13.75rem);
   overflow: hidden;
 }
 .starwarsffg.sheet.actor .character .sheet-body .general .grid, .starwarsffg.sheet.actor .character .sheet-body .obligation .grid {
@@ -470,10 +470,8 @@ img {
 }
 .starwarsffg.sheet.actor .character .sheet-body .characteristics {
   overflow: hidden;
-  height: calc(100% + 26.25rem);
 }
 .starwarsffg.sheet.actor .character .sheet-body .skillsTablesGrid {
-  height: calc(100% - 32.1875rem);
   overflow: auto;
 }
 .starwarsffg.sheet.actor .character .sheet-body table.force-powers {
@@ -1418,10 +1416,7 @@ img {
   position: relative;
 }
 .starwarsffg .skillsTablesGrid {
-  position: relative;
   overflow: auto;
-  height: calc(100% - 5.5rem);
-  float: left;
   width: 100%;
 }
 .starwarsffg .skillsGrid {
@@ -2945,4 +2940,12 @@ img {
 .destiny-flip.dPoolLight {
   background-color: #b8383b;
   color: white;
+}
+
+.starwarsffg.sheet.actor .editable {
+  display: contents; /* removes the form element from layout, so all it childs acts like childs of the parent flexbox. */
+}
+.starwarsffg.sheet.actor .sheet-body .tab.active {
+  display: flex;
+  flex-direction: column;
 }
